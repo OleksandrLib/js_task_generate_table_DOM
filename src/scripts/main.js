@@ -378,13 +378,15 @@ people.forEach((person) => {
 
   diedCell.textContent = person.died;
 
+  const age = person.died - person.born;
   const ageCell = document.createElement('td');
 
-  ageCell.textContent = person.age;
+  ageCell.textContent = age;
 
+  const century = Math.ceil(person.died / 100);
   const centuryCell = document.createElement('td');
 
-  centuryCell.textContent = Math.ceil(person.died / 100);
+  centuryCell.textContent = century;
 
   row.appendChild(nameCell);
   row.appendChild(sexCell);
